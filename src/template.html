@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>BlackJack RS</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app" id="app">
+    <div class="header">
+      <div class="header__logo">
+        <img src="./images/logo.png" alt="BlackJack RS" class="logo">
+      </div>
+      <div class="header__menu">
+
+      </div>
+    </div>
+    <div class="app__body">
+      <div class="table table_hidden">
+        <div class="table__menu">
+          <button class="btn btn_small"><img src="images/icon-pause.svg" alt="" class="btn__icon-pause"></button>
+          <button class="btn btn_small btn_sound btn_sound-off"></button>
+        </div>
+        <button class="btn btn_round btn_deal">Deal</button>
+        <p class="table__user-money">Total: $<span id="user-money">2000</span></p>
+        <p class="table__bet-money">$<span id="bet-money">250</span></p>
+        <div class="chip chip_50 chip_bet">
+          <svg class="chip__item chip__item_50">
+            <use xlink:href="#chip"></use>
+          </svg>
+        </div>
+        <div class="chip chip_10">
+          <svg class="chip__item chip__item_10">
+            <use xlink:href="#chip"></use>
+          </svg>
+        </div>
+        <div class="chip chip_50">
+          <svg class="chip__item chip__item_50">
+            <use xlink:href="#chip"></use>
+          </svg>
+        </div>
+        <div class="chip chip_100">
+          <svg class="chip__item chip__item_100">
+            <use xlink:href="#chip"></use>
+          </svg>
+        </div>
+        <div class="chip chip_500">
+          <svg class="chip__item chip__item_500">
+            <use xlink:href="#chip"></use>
+          </svg>
+        </div>
+        <div class="playingCards fourColours rotateHand playingCards_player">
+          <button class="btn btn_round btn_hit">Hit</button>
+          <p class="playingCards__sum">12</p>
+          <ul class="hand">
+            <li>
+              <div class="card rank-7 spades">
+                <span class="rank">7</span>
+                <span class="suit">&spades;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-3 hearts">
+                <span class="rank">3</span>
+                <span class="suit">&hearts;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-10 diams">
+                <span class="rank">10</span>
+                <span class="suit">&diams;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-j hearts">
+                <span class="rank">J</span>
+                <span class="suit">&hearts;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">Q</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="playingCards fourColours rotateHand playingCards_dealer">
+          <button class="btn btn_round  btn_stand">Stand</button>
+          <p class="playingCards__sum">21</p>
+          <ul class="hand">
+            <li>
+              <div class="card rank-7 spades">
+                <span class="rank">7</span>
+                <span class="suit">&spades;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-3 hearts">
+                <span class="rank">3</span>
+                <span class="suit">&hearts;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-10 diams">
+                <span class="rank">10</span>
+                <span class="suit">&diams;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-j hearts">
+                <span class="rank">J</span>
+                <span class="suit">&hearts;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">Q</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+            <li>
+              <div class="card rank-k clubs">
+                <span class="rank">K</span>
+                <span class="suit">&clubs;</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="notice notice_hidden">Place your bets</p>
+      <div class="start-screen start-screen_hidden">
+        <div class="start-screen__logo">
+          <img src="images/logo.png" alt="" class="logo logo_start-screen">
+        </div>
+        <div class="start-screen__buttons">
+          <button class="btn btn_menu">
+            <img src="images/icon-play.svg" alt="" class="btn__icon-play">
+            Play
+          </button>
+          <button class="btn  btn_menu">
+            <img src="images/icon-options.svg" alt="" class="btn__icon-options">
+            Options
+          </button>
+          <button class="btn  btn_menu">
+            <img src="images/icon-stats.svg" alt="" class="btn__icon-records">
+            Records
+          </button>
+        </div>
+        <div class="start-screen__user-record">
+          <div class="start-screen__user-record-box">
+            <img src="images/icon-dollars.png" alt="" class="start-screen__dollars">
+            Your record
+            <img src="images/icon-dollars.png" alt="" class="start-screen__dollars">
+          </div>
+          <div class="start-screen__user-record-value">
+            $3550
+          </div>
+        </div>
+      </div>
+      <div class="options options_hidden">
+        <button class="btn btn_small btn_options-close"><img src="images/icon-arrow-left.svg" alt=""
+            class="btn__icon-left"></button>
+        <p class="options__title">
+          Options
+        </p>
+        <table class="options__table">
+          <tr>
+            <td class="options__item-name">Decks</td>
+            <td class="options__decks">
+              <button class="btn btn_small">1</button>
+              <button class="btn btn_small btn_inactive">2</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="options__item-name"><label for="hitsSoft17">Dealer hits on soft 17</label></td>
+            <td><input type="checkbox" class="custom-checkbox" id="hitsSoft17"></td>
+          </tr>
+          <tr>
+            <td class="options__item-name"><label for="insurance">Insurance</label></td>
+            <td><input type="checkbox" class="custom-checkbox" id="insurance"></td>
+          </tr>
+          <tr>
+            <td class="options__item-name"><label for="autoLastBet">Auto last bet</label></td>
+            <td><input type="checkbox" class="custom-checkbox" id="autoLastBet"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="records records_hidden">
+        <button class="btn btn_small btn_options-close"><img src="images/icon-arrow-left.svg" alt=""
+            class="btn__icon-left"></button>
+        <p class="records__title">
+          Records
+        </p>
+        <table class="records__table">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Record</td>
+              <td>Losing</td>
+              <td>Date</td>
+            </tr>
+          </thead>
+          <tr>
+            <td>Alexander</td>
+            <td>3650</td>
+            <td>3</td>
+            <td>25.02.2021</td>
+          </tr>
+          <tr>
+            <td>Margarita</td>
+            <td>2900</td>
+            <td>1</td>
+            <td>21.01.2021</td>
+          </tr>
+        </table>
+        <p class="records__notice">
+          No records at the moment...
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://rs.school/" target="_blank"><img src="images/rs-school-logo.svg" width="55" height="21"
+          class="footer__logo" alt=""></a>
+      <a href="https://github.com/Helias17/" target="_blank" class="footer__link">Helias17</a>
+    </div>
+  </div>
+  <svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.477 296.477" id="chip">
+      <path
+        d="M244.63 35.621c-21.771-18.635-47.382-29.855-73.767-33.902-48.992-7.516-100.64 9.702-135.241 50.128-53.236 62.198-45.972 155.773 16.226 209.01 21.771 18.634 47.381 29.853 73.766 33.901 48.991 7.517 100.641-9.703 135.241-50.13 53.236-62.197 45.971-155.772-16.225-209.007zm28.731 155.62l-45.305-15.618c6.102-17.803 6.028-37.107.014-54.724l45.257-15.575a132.754 132.754 0 016.74 32.741c1.422 18.309-.915 36.323-6.706 53.176zm2.544-87.183v-.008.008zm-27.97-42.586l-36.069 31.332a85.115 85.115 0 00-8.752-8.677 83.969 83.969 0 00-38.637-18.692l9.095-46.741c22.33 4.33 43.21 14.294 60.635 29.209a134.544 134.544 0 0113.728 13.569zM103.251 23.983a130.492 130.492 0 0119.71-5.388l9.087 46.843c-17.789 3.467-34.584 12.651-47.393 27.341L48.55 61.38a131.909 131.909 0 0154.701-37.397zm-80.127 81.253l45.297 15.617c-6.102 17.803-6.028 37.105-.015 54.723l-45.295 15.588a133.018 133.018 0 01-6.713-32.688c-1.422-18.325.922-36.366 6.726-53.24zm25.343 129.83l36.145-31.395a84.962 84.962 0 008.754 8.68A83.967 83.967 0 00132 231.042l-9.143 46.997c-22.325-4.348-43.185-14.422-60.604-29.333a133.868 133.868 0 01-13.786-13.64zm144.736 37.569a132.222 132.222 0 01-19.658 5.403l-9.117-47c17.789-3.467 34.585-12.651 47.394-27.342l36.121 31.409c-14.789 16.982-33.686 29.942-54.74 37.53z">
+      </path>
+      <circle cx="93.372" cy="53.498" r="8"></circle>
+      <circle cx="38.758" cy="148.382" r="8"></circle>
+      <circle cx="93.623" cy="243.123" r="8"></circle>
+      <circle cx="203.105" cy="242.977" r="8.001"></circle>
+      <circle cx="257.717" cy="148.091" r="8"></circle>
+      <circle cx="202.853" cy="53.351" r="8"></circle>
+    </symbol>
+  </svg>
+</body>
+
+</html>

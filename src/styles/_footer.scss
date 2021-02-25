@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 14px;
+
+  &__logo {
+    width: 55px;
+    height: 21px;
+    filter: drop-shadow(0 0 3px white);
+  }
+
+  &__link {
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    background: url('../images/icon-github.svg') no-repeat left center / auto 100%;
+    padding-left: 30px;
+    margin-left: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}

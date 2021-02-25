@@ -1,0 +1,15 @@
+.notice {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  color: #fff;
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+
+  &_hidden {
+    display: none;
+  }
+}
