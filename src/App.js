@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from '@js/components/header/Header';
+import Body from '@js/components/body/Body';
+import Footer from '@js/components/footer/Footer';
 
-const App = () => {
+const App = (props) => {
   return (
-    <div>
-      Hello, man!
+    <div className="app__box">
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }

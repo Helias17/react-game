@@ -1,10 +1,15 @@
 .app {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 0 5vw;
-  user-select: none;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0 5vw;
+    user-select: none;
+  }
 
   &__body {
     position: relative;

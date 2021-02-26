@@ -39,7 +39,7 @@ module.exports = {
     // Generates an HTML file from a template
     // Создание HTML-файла на основе шаблона
     new HtmlWebpackPlugin({
-      title: 'Tinder',
+      title: 'BlackJack RS',
       favicon: `${paths.src}/images/favicon.ico`,
       // template file
       // шаблон
@@ -54,7 +54,7 @@ module.exports = {
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
       // JavaScript: использовать Babel для транспиляции
-      { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] },
+      { test: /\.js|jsx$/, exclude: /node_modules/, use: ['babel-loader'] },
 
       // Styles: Inject CSS into the head with source maps
       // Стили: встроить CSS в head с картами источников
