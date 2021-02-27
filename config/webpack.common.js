@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
+const path = require('path');
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -15,6 +16,14 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: './',
   },
+
+  resolve: {
+    alias: {
+      '@js': path.resolve(__dirname, '../src/js'),
+    },
+    extensions: ['.js', '.jsx'],
+  },
+
   // Customize the webpack build process
   // Настройки
   plugins: [

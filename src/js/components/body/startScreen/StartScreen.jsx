@@ -17,10 +17,10 @@ const StartScreen = (props) => {
           <img src="assets/icon-options.svg" alt="" className="btn__icon-options" />
           Options
         </NavLink>
-        <button className="btn  btn_menu">
+        <NavLink to="/records" className="btn btn_menu">
           <img src="assets/icon-stats.svg" alt="" className="btn__icon-records" />
           Records
-        </button>
+        </NavLink>
       </div>
       <PlayerRecord />
     </div>

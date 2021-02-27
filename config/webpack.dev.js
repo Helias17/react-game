@@ -1,5 +1,4 @@
 const paths = require('./paths');
-const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -12,13 +11,6 @@ module.exports = merge(common, {
   // Control how source maps are generated
   // Управление созданием карт источников
   devtool: 'inline-source-map',
-
-  resolve: {
-    alias: {
-      '@js': path.resolve(__dirname, '../src/js'),
-    },
-    extensions: ['.js', '.jsx'],
-  },
 
   // Spin up a server for quick development
   // Запуск сервера для разработки

@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Records = (props) => {
   return (
     <div class="records">
-      <button class="btn btn_small btn_options-close"><img src="/assets/icon-arrow-left.svg" alt=""
-        class="btn__icon-left" /></button>
+      <NavLink to="/" class="btn btn_small btn_options-close"><img src="/assets/icon-arrow-left.svg" alt=""
+        class="btn__icon-left" /></NavLink>
       <p class="records__title">
         Records
     </p>
