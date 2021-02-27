@@ -1,18 +1,25 @@
 import React from 'react';
+import options from '@js/options.js';
 
 const PlayerRecord = (props) => {
-  return (
-    <div className="start-screen__user-record">
-      <div className="start-screen__user-record-box">
+
+  if (options.playerRecord) {
+    return (
+      <div className="start-screen__user-record">
+        <div className="start-screen__user-record-box">
+          <img src="assets/icon-dollars.png" alt="" className="start-screen__dollars" />
+        Your record
         <img src="assets/icon-dollars.png" alt="" className="start-screen__dollars" />
-      Your record
-      <img src="assets/icon-dollars.png" alt="" className="start-screen__dollars" />
+        </div>
+        <div className="start-screen__user-record-value">
+          ${options.playerRecord}
+        </div>
       </div>
-      <div className="start-screen__user-record-value">
-        $3550
-      </div>
-    </div>
-  );
+    );
+  }
+
+  return (null);
+
 }
 
 export default PlayerRecord;

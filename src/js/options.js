@@ -1,10 +1,10 @@
 const options = {
-  decksNum: 2,
+  decksNum: 1,
   playerRecord: null,
   dealerHitsOnSoft17: false,
   insurance: false,
   autoLastBet: false,
-  playerRecord: null,
+  playerRecord: 7500,
 
   save: function() {
     localStorage.setItem('blackJackRsOptions', JSON.stringify(this) );
