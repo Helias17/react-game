@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import createDeck from '@js/createDeck';
 import shuffleArray from '@js/shuffleArray';
 import options from '@js/options';
 import Card from './card/Card';
+import HitBtn from './hitBtn/HitBtn';
 
 options.deck = shuffleArray(createDeck());
 options.save();
@@ -10,6 +11,9 @@ options.save();
 console.log('Deck created!', options.deck);
 
 const PlayingСards = (props) => {
+
+  // state for calling render component from buttons hit and stand
+  let [playingCardsState, setPlayingCardsState] = useState(0);
 
   const playerCardsArr = options.playerCards.map(
     (cardItem, index) => <Card cardItem={cardItem} key={index} />
@@ -36,7 +40,7 @@ const PlayingСards = (props) => {
   return (
     <div className="table__playingCards">
       <div className="playingCards fourColours rotateHand playingCards_player">
-        <button className="btn btn_round btn_hit">Hit</button>
+        <HitBtn setPlayingCardsState={setPlayingCardsState} playingCardsState={playingCardsState} />
         <p className="playingCards__sum">{playerCardsSum}</p>
         <ul className="hand">
           {playerCardsArr}
