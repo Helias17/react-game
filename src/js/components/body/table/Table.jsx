@@ -15,8 +15,11 @@ const Table = (props) => {
   return (
     <div className={tableClass}>
       <GameControls setTableState={props.setTableState} setStartScreenState={props.setStartScreenState} />
+
       <Chips setNoticeState={props.setNoticeState} setPlayingCardsState={setPlayingCardsState} />
+
       {playingCardsState.visible && <PlayingСards />}
+
       <Notice noticeState={props.noticeState} noticeText={props.noticeText} />
     </div>
   );

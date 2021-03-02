@@ -16,12 +16,11 @@ const Body = (props) => {
   let setStartScreenState;
   [startScreenState.visible, setStartScreenState] = useState(true);
 
-  const noticeState = { visible: false };
+  let noticeState = { visible: false };
   let setNoticeState;
   [noticeState.visible, setNoticeState] = useState(false);
-  let noticeText = '';
-  let setNoticeText;
-  [noticeText, setNoticeText] = useState('');
+
+  let [noticeText, setNoticeText] = useState('');
 
   return (
     <BrowserRouter>
