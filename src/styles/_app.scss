@@ -16,4 +16,9 @@
     flex-grow: 1;
     overflow: hidden;
   }
+
+  &__btn {
+    position: relative;
+    z-index: 10;;
+  }
 }

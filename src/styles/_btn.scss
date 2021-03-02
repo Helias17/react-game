@@ -85,6 +85,7 @@
     position: absolute;
     left: 1vw;
     top: calc(50% - 4vw);
+    z-index: 2;
   }
 
   &_options-close {
@@ -113,6 +114,10 @@
   &__icon-left {
     width: 25px;
     height: 25px;
+  }
+
+  &_hidden {
+    display: none;
   }
 
 

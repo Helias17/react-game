@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 const Records = (props) => {
   return (
-    <div class="records">
-      <NavLink to="/" class="btn btn_small btn_options-close"><img src="/assets/icon-arrow-left.svg" alt=""
-        class="btn__icon-left" /></NavLink>
-      <p class="records__title">
+    <div className="records">
+      <NavLink to="/" className="btn btn_small btn_options-close"><img src="/assets/icon-arrow-left.svg" alt=""
+        className="btn__icon-left" /></NavLink>
+      <p className="records__title">
         Records
     </p>
-      <table class="records__table">
+      <table className="records__table">
         <thead>
           <tr>
             <td>Name</td>
@@ -18,20 +18,23 @@ const Records = (props) => {
             <td>Date</td>
           </tr>
         </thead>
-        <tr>
-          <td>Alexander</td>
-          <td>3650</td>
-          <td>3</td>
-          <td>25.02.2021</td>
-        </tr>
-        <tr>
-          <td>Margarita</td>
-          <td>2900</td>
-          <td>1</td>
-          <td>21.01.2021</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Alexander</td>
+            <td>3650</td>
+            <td>3</td>
+            <td>25.02.2021</td>
+          </tr>
+          <tr>
+            <td>Margarita</td>
+            <td>2900</td>
+            <td>1</td>
+            <td>21.01.2021</td>
+          </tr>
+
+        </tbody>
       </table>
-      <p class="records__notice">
+      <p className="records__notice">
         No records at the moment...
     </p>
     </div>

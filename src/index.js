@@ -4,6 +4,8 @@ import App from './App';
 import './styles/index.scss';
 import readOptionsFromLS from './js/readOptionsFromLS';
 
+//localStorage.clear();
+
 readOptionsFromLS();
 
 ReactDOM.render(
