@@ -16,7 +16,7 @@ const Options = (props) => {
 
   return (
     <div className="options">
-      <NavLink to="/" className="btn btn_small btn_options-close"><img src="/assets/icon-arrow-left.svg" alt=""
+      <NavLink to="/" className="btn btn_small btn_options-close animate__animated animate__bounceInRight"><img src="/assets/icon-arrow-left.svg" alt=""
         className="btn__icon-left" /></NavLink>
       <p className="options__title">
         Options

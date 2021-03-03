@@ -102,6 +102,7 @@
   }
 
   &_stand {
+    --animate-delay: 0.5s;
     position: absolute;
     left: 0;
     bottom: 0;

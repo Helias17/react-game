@@ -3,7 +3,7 @@ import options from '@js/options';
 
 const ChipOnBet = (props) => {
 
-  const compClassName = `chip chip_${props.value} chip_bet`;
+  const compClassName = `chip chip_${props.value} chip_bet animate__animated animate__backInUp animate__faster`;
   const svgClassName = `chip__item chip__item_${props.value}`;
 
   return (

@@ -9,7 +9,7 @@ const HitBtn = (props) => {
   }
 
   return (
-    <button className="btn btn_round btn_hit" onClick={addCardToPlayer}>Hit</button>
+    <button className="btn btn_round btn_hit animate__animated animate__bounceIn" onClick={addCardToPlayer}>Hit</button>
   );
 }
 

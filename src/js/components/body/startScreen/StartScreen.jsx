@@ -9,10 +9,10 @@ const StartScreen = (props) => {
 
   return (
     <div className={compClassName}>
-      <div className="start-screen__logo">
+      <div className="start-screen__logo animate__animated animate__backInDown">
         <img src="assets/logo.png" alt="" className="logo logo_start-screen" />
       </div>
-      <div className="start-screen__buttons">
+      <div className="start-screen__buttons animate__animated animate__backInUp">
         <button className="btn btn_menu" onClick={() => {
           options.deal = false;
           options.playerCards.length = 0;

@@ -4,7 +4,7 @@ import createDeck from '@js/createDeck';
 import shuffleArray from '@js/shuffleArray';
 
 const BtnDeal = (props) => {
-  let compClassName = 'btn btn_round btn_deal';
+  let compClassName = 'btn btn_round btn_deal animate__animated animate__bounceInLeft';
 
   compClassName = props.btnDealState.visible ? compClassName : `${compClassName} btn_hidden`;
 

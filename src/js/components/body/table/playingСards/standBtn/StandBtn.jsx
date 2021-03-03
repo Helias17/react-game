@@ -20,7 +20,7 @@ const StandBtn = (props) => {
   }
 
   return (
-    <button className="btn btn_round  btn_stand" onClick={() => {
+    <button className="btn btn_round  btn_stand animate__animated animate__bounceIn animate__delay-1s" onClick={() => {
       addCardToDealer();
       props.setHitStandBtnVisible(false);
       options.stand = true;

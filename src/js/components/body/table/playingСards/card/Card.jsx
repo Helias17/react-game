@@ -3,7 +3,7 @@ import React from 'react';
 const Card = (props) => {
 
   const cardItem = props.cardItem;
-  const cardClassName = props.backside ? 'card back' : `card rank-${cardItem.name} ${cardItem.class}`;
+  const cardClassName = props.backside ? 'card back animate__animated animate__backInDown' : `card rank-${cardItem.name} ${cardItem.class} animate__animated animate__backInDown`;
 
   return (
     <li>

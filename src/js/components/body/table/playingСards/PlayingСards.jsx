@@ -147,7 +147,7 @@ const PlayingСards = (props) => {
         {noticeVisible || !hitStandBtnVisible ? '' :
           <HitBtn setPlayingCardsState={setPlayingCardsState} />
         }
-        <p className="playingCards__sum">{playerCardsSum}</p>
+        <p className="playingCards__sum animate__animated animate__delay-1s animate__fadeIn">{playerCardsSum}</p>
         <ul className="hand">
           {playerCardsArr}
         </ul>
@@ -158,7 +158,7 @@ const PlayingСards = (props) => {
           setPlayingCardsState={setPlayingCardsState}
           playerCardsSum={playerCardsSum}
         />}
-        <p className="playingCards__sum">{dealerCardsSum}</p>
+        <p className="playingCards__sum playingCards__sum animate__animated animate__delay-1s animate__fadeIn">{dealerCardsSum}</p>
         <ul className="hand">
           {dealerCardsArr}
         </ul>

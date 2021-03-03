@@ -6,7 +6,7 @@ const options = {
   autoLastBet: false,
   music: true,
   sounds: true,
-  playerRecord: 7500,
+  playerRecord: 0,
   playerBank: 2000,
   playerBet: 0,
   chipsOnBet: [],
