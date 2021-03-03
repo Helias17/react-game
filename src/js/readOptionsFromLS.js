@@ -8,7 +8,7 @@ const readOptionsFromLS = () => {
   const optionsLS = localStorage.getItem('blackJackRsOptions') ? JSON.parse(localStorage.getItem('blackJackRsOptions')) : null;
 
   if ( optionsLS !== null && typeof optionsLS === 'object' && optionsLS.hasOwnProperty('playerRecord')) {
-    Object.entries(optionsLS).forEach((item) => options[item[0]] = item[1]);
+    Object.entries(optionsLS).forEach((item) => {options[item[0]] = item[1]; });
   }
 }
 

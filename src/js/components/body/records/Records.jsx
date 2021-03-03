@@ -9,31 +9,34 @@ const Records = (props) => {
       <p className="records__title">
         Records
     </p>
-      <table className="records__table">
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Record</td>
-            <td>Losing</td>
-            <td>Date</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alexander</td>
-            <td>3650</td>
-            <td>3</td>
-            <td>25.02.2021</td>
-          </tr>
-          <tr>
-            <td>Margarita</td>
-            <td>2900</td>
-            <td>1</td>
-            <td>21.01.2021</td>
-          </tr>
+      <div className="records__table-box">
+        <table className="records__table">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Record</td>
+              <td>Losing</td>
+              <td>Date</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alexander</td>
+              <td>3650</td>
+              <td>3</td>
+              <td>25.02.2021</td>
+            </tr>
+            <tr>
+              <td>Margarita</td>
+              <td>2900</td>
+              <td>1</td>
+              <td>21.01.2021</td>
+            </tr>
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
+
       <p className="records__notice">
         No records at the moment...
     </p>

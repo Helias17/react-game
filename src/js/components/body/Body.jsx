@@ -32,6 +32,7 @@ const Body = (props) => {
           noticeState={noticeState}
           setNoticeState={setNoticeState}
           noticeText={noticeText}
+          setNoticeText={setNoticeText}
         />
         <Route exact path="/" component={() => <StartScreen
           setTableState={setTableState}

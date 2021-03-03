@@ -8,6 +8,7 @@ function useForceUpdate() {
   return () => setValue(value => value + 1); // update the state to force render
 }
 
+
 const Options = (props) => {
   const forceUpdate = useForceUpdate();   // call hook
 

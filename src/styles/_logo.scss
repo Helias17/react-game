@@ -3,6 +3,11 @@
   width: 300px;
   height: auto;
 
+  @media (max-width: $screen-tablet) {
+    width: 200px;
+    margin: 0 auto;
+  }
+
   &_start-screen {
     width: 40vw;
     max-width: 620px;

@@ -14,14 +14,16 @@ const StartScreen = (props) => {
       </div>
       <div className="start-screen__buttons">
         <button className="btn btn_menu" onClick={() => {
+          options.deal = false;
+          options.playerCards.length = 0;
+          options.dealerCards.length = 0;
+          if (options.playerBank === 0) options.playerBank = 2000;
+          options.playerBet = 0;
+          options.save();
           props.setTableState(true);
           props.setStartScreenState(false);
           props.setNoticeState(true);
           props.setNoticeText('Place your bets');
-          options.deal = false;
-          options.playerCards.length = 0;
-          options.dealerCards.length = 0;
-          options.save();
         }}>
           <img src="assets/icon-play.svg" alt="" className="btn__icon-play" />
           Play

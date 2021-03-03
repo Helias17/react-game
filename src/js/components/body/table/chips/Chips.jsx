@@ -6,41 +6,43 @@ import options from '@js/options';
 
 const Chips = (props) => {
 
-  let btnDealState = { visible: true };
-  let setBtnDealState;
-  [btnDealState.visible, setBtnDealState] = useState(true);
-
-  let [playerBank, setPlayerBank] = useState(options.playerBank);
-
-  // const chipsOnBet = [];
-  let [chipsOnBet, setChipsOnBet] = useState([]);
+  let [count, setCount] = useState(0);
 
   // sum of all players bets
-  const playerBet = chipsOnBet.reduce((sum, bet) => sum + bet, 0)
+  const playerBet = props.chipsOnBet.reduce((sum, bet) => sum + bet, 0)
 
   const makeBet = (bet) => {
-    setPlayerBank(playerBank - bet);
-    setChipsOnBet([...chipsOnBet, bet])
+    options.playerBank -= bet;
+    props.setChipsOnBet([...props.chipsOnBet, bet])
+    props.setBtnDealState(true);
+    setCount(count + 1);
   }
 
   const removeBet = () => {
-    const removedBet = chipsOnBet.pop();
-    setPlayerBank(playerBank + removedBet);
-    setChipsOnBet(chipsOnBet);
+    const removedBet = props.chipsOnBet.pop();
+    options.playerBank += removedBet;
+    console.log(options.playerBank);
+    props.setChipsOnBet(props.chipsOnBet);
+    setCount(count + 1);
   }
 
   let chipsOnBetArr = [];
-  if (chipsOnBet.length) {
-    chipsOnBetArr = chipsOnBet.map((item, index) => <ChipOnBet value={item} removeBet={removeBet} key={index} />)
+  if (props.chipsOnBet.length) {
+    chipsOnBetArr = props.chipsOnBet.map((item, index) => <ChipOnBet value={item} removeBet={removeBet} key={index} />)
   }
+
+  // save actual data 
+  options.playerBet = playerBet;
+  options.chipsOnBet = [].concat(props.chipsOnBet);
+  options.save();
 
   return (
     <div className="table__chips">
-      <p className="table__user-money">Total: ${playerBank}</p>
+      <p className="table__user-money">Total: ${options.playerBank}</p>
       <p className="table__bet-money">{playerBet ? '$' + playerBet : ''}</p>
-      {chipsOnBet.length && <BtnDeal
-        btnDealState={btnDealState}
-        setBtnDealState={setBtnDealState}
+      {props.chipsOnBet.length && <BtnDeal
+        btnDealState={props.btnDealState}
+        setBtnDealState={props.setBtnDealState}
         setNoticeState={props.setNoticeState}
         setPlayingCardsState={props.setPlayingCardsState}
       />}
@@ -49,10 +51,10 @@ const Chips = (props) => {
       {chipsOnBetArr}
 
       {/* chips for making bets */}
-      { playerBank && playerBank / 10 >= 1 ? <Chip value={10} makeBet={makeBet} /> : ''}
-      { playerBank && playerBank / 50 >= 1 ? <Chip value={50} makeBet={makeBet} /> : ''}
-      { playerBank && playerBank / 100 >= 1 ? <Chip value={100} makeBet={makeBet} /> : ''}
-      { playerBank && playerBank / 500 >= 1 ? <Chip value={500} makeBet={makeBet} /> : ''}
+      { options.playerBank && options.playerBank / 10 >= 1 ? <Chip value={10} makeBet={makeBet} /> : ''}
+      { options.playerBank && options.playerBank / 50 >= 1 ? <Chip value={50} makeBet={makeBet} /> : ''}
+      { options.playerBank && options.playerBank / 100 >= 1 ? <Chip value={100} makeBet={makeBet} /> : ''}
+      { options.playerBank && options.playerBank / 500 >= 1 ? <Chip value={500} makeBet={makeBet} /> : ''}
     </div>
   );
 }

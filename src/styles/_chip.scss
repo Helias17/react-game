@@ -7,6 +7,17 @@
   cursor: pointer;
   transition: 0.3s;
 
+  @media (max-width: $screen-laptop) {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  @media (max-width: $screen-tablet) {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+  }
+
   &:after {
     display: flex;
     justify-content: center;
@@ -20,10 +31,18 @@
     font-size: 16px;
     font-weight: bold;
     color: #000;
+
+    @media (max-width: $screen-tablet) {
+      font-size: 14px;
+    }
   }
 
   &_10 {
     left: 1vw;
+
+    @media (max-width: $screen-tablet) {
+      left: 10px;
+    }
 
     &:after {
       content: '10';
@@ -33,6 +52,14 @@
   &_50 {
     left: 7vw;
 
+    @media (max-width: $screen-laptop) {
+      left: 11vw;
+    }
+
+    @media (max-width: $screen-tablet) {
+      left: 70px;
+    }
+
     &:after {
       content: '50';
     }
@@ -41,6 +68,14 @@
   &_100 {
     left: 13vw;
 
+    @media (max-width: $screen-laptop) {
+      left: 21vw;
+    }
+
+    @media (max-width: $screen-tablet) {
+      left: 130px;
+    }
+
     &:after {
       content: '100';
     }
@@ -48,6 +83,15 @@
 
   &_500 {
     left: 19vw;
+
+    @media (max-width: $screen-laptop) {
+      left: 31vw;
+    }
+
+    @media (max-width: $screen-tablet) {
+      left: 190px;
+    }
+
 
     &:after {
       content: '500';
@@ -58,6 +102,11 @@
     top: 1vw;
     left: 1vw;
     bottom: none;
+
+    @media (max-width: $screen-tablet) {
+      top: 10px;
+      left: 10px;
+    }
   }
 
   &__item {

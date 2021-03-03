@@ -20,11 +20,32 @@
     text-align: center;
     -webkit-text-stroke: 3px black;
     margin-bottom: 30px;
+
+    @media (max-width: $screen-laptop) {
+      font-size: 50px;
+     }
+
+     @media (max-width: $screen-tablet) {
+      font-size: 40px;
+      -webkit-text-stroke: 2px black;
+     }
+  }
+
+  &__table-box {
+    width: 90%;
+    max-width: 90%;
+    overflow: auto;
+    margin: 0 auto;
   }
 
   &__table {
     font-size: 20px;
     color: #fff;
+    margin: 0 auto;
+
+    @media (max-width: $screen-smart-l) {
+      font-size: 16px;
+     }
 
     & thead td {
       font-weight: bold;

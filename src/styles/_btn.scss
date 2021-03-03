@@ -26,6 +26,10 @@
     color: #fff;
     padding: 0 30px;
     margin: 0 5px;
+
+    @media (max-width: $screen-tablet) {
+      margin-bottom: 10px;
+    }
   }
 
   &_small {
@@ -37,6 +41,17 @@
     color: #fff;
     font-size: 20px;
     font-weight: bold;
+
+    @media (max-width: $screen-laptop) {
+      height: 5vw;
+      min-width: 7vw;
+    }
+
+    @media (max-width: $screen-smart-l) {
+      height: 20px;
+      min-width: 30px;
+      font-size: 14px;
+    }
   }
 
   &_inactive {
@@ -67,6 +82,17 @@
     color: #ccc;
     font-size: 18px;
     font-weight: bold;
+
+    @media (max-width: $screen-laptop) {
+      width: 7vw;
+      height: 7vw;
+    }
+
+    @media (max-width: $screen-tablet) {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
   }
 
   &_hit {
@@ -109,11 +135,22 @@
   &__icon-pause {
     width: 25px;
     height: 25px;
+
+    @media (max-width: $screen-smart-l) {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &__icon-left {
     width: 25px;
     height: 25px;
+
+
+    @media (max-width: $screen-tablet) {
+      width: 15px;
+      height: 15px;
+     }
   }
 
   &_hidden {
