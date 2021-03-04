@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import options from '@js/options';
+import playSound from '@js/playSound';
 
 const ChipOnBet = (props) => {
 

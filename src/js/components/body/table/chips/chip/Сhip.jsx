@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import options from '@js/options';
+import playSound from '@js/playSound';
 
 const Chip = (props) => {
 
@@ -11,6 +12,7 @@ const Chip = (props) => {
       // if player fixed his bet by clicking deal button, we don't let to make new bet
       return false;
     }
+    playSound('chip');
     props.makeBet(props.value);
   }
 

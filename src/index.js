@@ -9,6 +9,7 @@ import 'animate.css';
 readOptionsFromLS();
 
 
+
 ReactDOM.render(
   <App />,
   document.getElementById('app')

@@ -15,6 +15,16 @@ const options = {
   playerCards: [],
   dealerCards: [],
   gameFinished: true,
+  audio: {
+    click: 'https://blackjack777.ws/sounds/click.wav',
+    back: 'https://blackjack777.ws/sounds/back.wav',
+    chip: 'https://blackjack777.ws/sounds/chip.wav',
+    card: 'https://blackjack777.ws/sounds/card.wav',
+    track1: 'https://blackjack777.ws/sounds/track1.wav',
+  },
+  music: true,
+  sounds: true,
+  volume: 1,
 
   save: function() {
     localStorage.setItem('blackJackRsOptions', JSON.stringify(this) );

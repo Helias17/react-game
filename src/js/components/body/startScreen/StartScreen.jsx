@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PlayerRecord from './playerRecord/PlayerRecord';
 import options from '@js/options';
+import playSound from '@js/playSound';
+import audioBackground from '@js/audioBackground';
 
 const StartScreen = (props) => {
 
@@ -14,6 +16,8 @@ const StartScreen = (props) => {
       </div>
       <div className="start-screen__buttons animate__animated animate__backInUp">
         <button className="btn btn_menu" onClick={() => {
+          playSound('click');
+          if (options.music) audioBackground.play();
           options.deal = false;
           options.playerCards.length = 0;
           options.dealerCards.length = 0;
@@ -29,11 +33,14 @@ const StartScreen = (props) => {
           <img src="assets/icon-play.svg" alt="" className="btn__icon-play" />
           Play
         </button>
-        <NavLink to="/options" className="btn  btn_menu">
+        <NavLink to="/options" className="btn  btn_menu" onClick={() => {
+          if (options.music) audioBackground.play();
+          playSound('click')
+        }}>
           <img src="assets/icon-options.svg" alt="" className="btn__icon-options" />
           Options
         </NavLink>
-        <NavLink to="/records" className="btn btn_menu">
+        <NavLink to="/records" className="btn btn_menu" onClick={() => playSound('click')}>
           <img src="assets/icon-stats.svg" alt="" className="btn__icon-records" />
           Records
         </NavLink>

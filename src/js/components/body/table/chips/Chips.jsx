@@ -3,6 +3,7 @@ import Chip from './chip/Сhip';
 import ChipOnBet from './chipOnBet/СhipOnBet';
 import BtnDeal from './btnDeal/BtnDeal';
 import options from '@js/options';
+import playSound from '@js/playSound';
 
 const Chips = (props) => {
 
@@ -19,6 +20,7 @@ const Chips = (props) => {
   }
 
   const removeBet = () => {
+    playSound('chip');
     const removedBet = props.chipsOnBet.pop();
     options.playerBank += removedBet;
     console.log(options.playerBank);

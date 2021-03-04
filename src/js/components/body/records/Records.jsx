@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import playSound from '@js/playSound';
 
 const Records = (props) => {
   return (
     <div className="records">
-      <NavLink to="/" className="btn btn_small btn_options-close animate__animated animate__bounceInRight"><img src="/assets/icon-arrow-left.svg" alt=""
+      <NavLink to="/" className="btn btn_small btn_options-close animate__animated animate__bounceInRight" onClick={() => playSound('back')}><img src="/assets/icon-arrow-left.svg" alt=""
         className="btn__icon-left" /></NavLink>
       <p className="records__title">
         Records
