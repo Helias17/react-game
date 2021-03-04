@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chip from './chip/Сhip';
 import ChipOnBet from './chipOnBet/СhipOnBet';
 import BtnDeal from './btnDeal/BtnDeal';
@@ -30,6 +30,19 @@ const Chips = (props) => {
   if (props.chipsOnBet.length) {
     chipsOnBetArr = props.chipsOnBet.map((item, index) => <ChipOnBet value={item} removeBet={removeBet} key={index} />)
   }
+
+  useEffect(() => {
+    const delKeyUp = (e) => {
+      if (e.code === 'Delete' && options.deal === false && options.gameFinished === false && options.chipsOnBet.length > 0) {
+        removeBet();
+      }
+    }
+
+    document.addEventListener('keyup', delKeyUp);
+
+    return () => document.removeEventListener('keyup', delKeyUp);
+  });
+
 
   // save actual data 
   options.playerBet = playerBet;

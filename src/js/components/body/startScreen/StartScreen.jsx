@@ -19,6 +19,7 @@ const StartScreen = (props) => {
           options.dealerCards.length = 0;
           if (options.playerBank === 0) options.playerBank = 2000;
           options.playerBet = 0;
+          options.gameFinished = false;
           options.save();
           props.setTableState(true);
           props.setStartScreenState(false);

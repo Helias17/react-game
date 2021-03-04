@@ -14,7 +14,7 @@ const options = {
   stand: false,
   playerCards: [],
   dealerCards: [],
-  gameFinished: false,
+  gameFinished: true,
 
   save: function() {
     localStorage.setItem('blackJackRsOptions', JSON.stringify(this) );

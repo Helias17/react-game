@@ -3,6 +3,7 @@ import PlayingСards from './playingСards/PlayingСards';
 import GameControls from './gameControls/GameControls';
 import Chips from './chips/Chips';
 import Notice from './notice/Notice';
+import Hotkeys from './hotkeys/Hotkeys';
 
 const Table = (props) => {
 
@@ -41,6 +42,7 @@ const Table = (props) => {
       />}
 
       <Notice noticeState={props.noticeState} noticeText={props.noticeText} />
+      <Hotkeys />
     </div>
   );
 }

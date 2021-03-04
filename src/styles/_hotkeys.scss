@@ -1,0 +1,16 @@
+.hotkeys {
+
+  &__box {
+    --animate-duration: 0.5s;
+    position: absolute;
+    z-index: 3;
+    left: 15px;
+    right: 100px;
+    bottom: 15px;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(black, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+  }
+}

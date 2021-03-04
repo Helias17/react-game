@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import options from '@js/options';
 
 const StandBtn = (props) => {
@@ -18,6 +18,26 @@ const StandBtn = (props) => {
       options.dealerCards.push(options.deck.pop());
     }
   }
+
+
+  useEffect(() => {
+
+    const minusKeyUp = (e) => {
+      if (e.code === 'NumpadSubtract' && options.deal === true && options.gameFinished === false) {
+        // addCardToDealer();
+        // props.setHitStandBtnVisible(false);
+        // options.stand = true;
+        document.querySelector('.btn_stand').click();
+        //console.log(e.code);
+      }
+    }
+
+    document.addEventListener('keyup', minusKeyUp);
+
+    return () => document.removeEventListener('keyup', minusKeyUp);
+
+  });
+
 
   return (
     <button className="btn btn_round  btn_stand animate__animated animate__bounceIn animate__delay-1s" onClick={() => {

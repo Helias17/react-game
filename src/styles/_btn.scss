@@ -99,6 +99,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 2;
   }
 
   &_stand {
@@ -106,6 +107,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 2;
   }
 
   &_deal {
@@ -119,6 +121,12 @@
     position: absolute;
     left: 3vw;
     top: 3vw;
+  }
+
+  &_icon-question {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
   }
 
   &__icon-play, &__icon-options {
