@@ -25,6 +25,7 @@ const options = {
   music: true,
   sounds: true,
   volume: 1,
+  muted: false,
 
   save: function() {
     localStorage.setItem('blackJackRsOptions', JSON.stringify(this) );

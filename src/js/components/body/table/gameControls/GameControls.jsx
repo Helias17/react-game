@@ -1,4 +1,6 @@
 import React from 'react';
+import MuteBtn from './muteBtn/MuteBtn';
+
 
 const GameControls = (props) => {
 
@@ -10,7 +12,7 @@ const GameControls = (props) => {
       }}>
         <img src="/assets/icon-pause.svg" alt="" className="btn__icon-pause" />
       </button>
-      <button className="btn btn_small btn_sound btn_sound-off animate__animated animate__backInRight"></button>
+      <MuteBtn />
     </div>
   );
 }
