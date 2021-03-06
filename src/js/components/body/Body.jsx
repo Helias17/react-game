@@ -22,6 +22,11 @@ const Body = (props) => {
 
   let [noticeText, setNoticeText] = useState('');
 
+  let playingCardsState = { visible: false };
+  let setPlayingCardsState;
+  [playingCardsState.visible, setPlayingCardsState] = useState(false);
+
+
   return (
     <BrowserRouter>
       <div className="app__body">
@@ -33,6 +38,8 @@ const Body = (props) => {
           setNoticeState={setNoticeState}
           noticeText={noticeText}
           setNoticeText={setNoticeText}
+          setPlayingCardsState={setPlayingCardsState}
+          playingCardsState={playingCardsState}
         />
         <Route exact path="/" component={() => <StartScreen
           setTableState={setTableState}
@@ -40,6 +47,7 @@ const Body = (props) => {
           setStartScreenState={setStartScreenState}
           setNoticeState={setNoticeState}
           setNoticeText={setNoticeText}
+          setPlayingCardsState={setPlayingCardsState}
         />} />
         <Route path="/records" component={Records} />
         <Route path="/options" component={Options} />

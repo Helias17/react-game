@@ -55,7 +55,7 @@ const Chips = (props) => {
     <div className="table__chips">
       <p className="table__user-money">Total: ${options.playerBank}</p>
       <p className="table__bet-money">{playerBet ? '$' + playerBet : ''}</p>
-      {props.chipsOnBet.length && <BtnDeal
+      {options.chipsOnBet.length && <BtnDeal
         btnDealState={props.btnDealState}
         setBtnDealState={props.setBtnDealState}
         setNoticeState={props.setNoticeState}

@@ -13,10 +13,6 @@ const Table = (props) => {
   let setBtnDealState;
   [btnDealState.visible, setBtnDealState] = useState(true);
 
-  let playingCardsState = { visible: false };
-  let setPlayingCardsState;
-  [playingCardsState.visible, setPlayingCardsState] = useState(false);
-
   let [chipsOnBet, setChipsOnBet] = useState([]);
 
   return (
@@ -25,14 +21,14 @@ const Table = (props) => {
 
       <Chips
         setNoticeState={props.setNoticeState}
-        setPlayingCardsState={setPlayingCardsState}
+        setPlayingCardsState={props.setPlayingCardsState}
         setBtnDealState={setBtnDealState}
         btnDealState={btnDealState}
         chipsOnBet={chipsOnBet}
         setChipsOnBet={setChipsOnBet}
       />
 
-      {playingCardsState.visible && <PlayingСards setPlayingCardsState={setPlayingCardsState}
+      {props.playingCardsState.visible && <PlayingСards setPlayingCardsState={props.setPlayingCardsState}
         setBtnDealState={setBtnDealState}
         setNoticeState={props.setNoticeState}
         setChipsOnBet={setChipsOnBet}
