@@ -76,11 +76,16 @@ const PlayingСards = (props) => {
     noticeVisible = true;
     noticeText = 'Dealer wins!';
     options.gameFinished = true;
-    if (options.autoLastBet) {
-      options.playerBank = options.playerBank - options.playerBet;
-    }
     if (options.playerBank === 0) {
       noticeText = 'Out of credits';
+    }
+    if (options.playerBank === 0 && options.autoLastBet) {
+      options.chipsOnBet.length = 0;
+    } else if (options.playerBank >= options.playerBet && options.autoLastBet) {
+      options.playerBank = options.playerBank - options.playerBet;
+    } else if (options.playerBank < options.playerBet && options.autoLastBet) {
+      options.chipsOnBet.length = 0;
+      options.playerBet = 0;
     }
     options.playerBet = 0;
     options.save;
@@ -145,7 +150,7 @@ const PlayingСards = (props) => {
       {noticeVisible ? <Notice noticeText={noticeText} /> : ''}
       <div className="playingCards fourColours rotateHand playingCards_player">
         {noticeVisible || !hitStandBtnVisible ? '' :
-          <HitBtn setPlayingCardsState={setPlayingCardsState} />
+          <HitBtn playingCardsState={playingCardsState} setPlayingCardsState={setPlayingCardsState} />
         }
         <p className="playingCards__sum animate__animated animate__delay-1s animate__fadeIn">{playerCardsSum}</p>
         <ul className="hand">

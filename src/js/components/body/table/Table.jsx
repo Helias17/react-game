@@ -30,7 +30,6 @@ const Table = (props) => {
         btnDealState={btnDealState}
         chipsOnBet={chipsOnBet}
         setChipsOnBet={setChipsOnBet}
-
       />
 
       {playingCardsState.visible && <PlayingСards setPlayingCardsState={setPlayingCardsState}
