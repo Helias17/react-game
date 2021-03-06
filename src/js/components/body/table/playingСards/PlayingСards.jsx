@@ -100,6 +100,7 @@ const PlayingСards = (props) => {
     } else {
       options.playerBank = options.playerBank + (options.playerBet * 2);
     }
+    if (options.playerBank > 2000) options.playerRecord = options.playerBank;
     options.playerBet = 0;
     options.save;
   }
