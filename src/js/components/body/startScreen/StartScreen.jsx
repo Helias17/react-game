@@ -45,10 +45,6 @@ const StartScreen = (props) => {
           <img src="assets/icon-options.svg" alt="" className="btn__icon-options" />
           Options
         </NavLink>
-        <NavLink to="/records" className="btn btn_menu" onClick={() => playSound('click')}>
-          <img src="assets/icon-stats.svg" alt="" className="btn__icon-records" />
-          Records
-        </NavLink>
       </div>
       <PlayerRecord />
     </div>

@@ -9,12 +9,7 @@ import 'animate.css';
 readOptionsFromLS();
 
 
-
 ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
-
-/* 
-setTimeout(() => alert('Уважаемый проверяющий, дедлайн по проверке этого задания 10 марта. Если возможно, прошу начать проверку не ранее 8 марта. Не успел допилить некоторые фичи. Спасибо!'), 100)
- */

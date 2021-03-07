@@ -24,11 +24,6 @@ const BtnDeal = (props) => {
     options.dealerCards.push(options.deck.pop());
     options.dealerCards.push(options.deck.pop());
 
-    /* options.playerCards.push({ class: "spades", name: '10', suit: "♠", value: 10 });
-    options.playerCards.push({ class: "spades", name: '10', suit: "♠", value: 10 });
-    options.dealerCards.push({ class: "spades", name: '10', suit: "♠", value: 10 });
-    options.dealerCards.push({ class: "spades", name: '10', suit: "♠", value: 10 }); */
-
     options.save();
   }
 

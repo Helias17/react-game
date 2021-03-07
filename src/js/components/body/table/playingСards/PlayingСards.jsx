@@ -36,8 +36,11 @@ const PlayingСards = (props) => {
   playerCardsValues.sort((a, b) => b - a);
   console.log('playerCardsValues: ', playerCardsValues);
 
+  const playerAcesArr = playerCardsValues.filter(item => item === 1);
+  const playerAces = playerAcesArr.length;
+
   const playerCardsSum = playerCardsValues.reduce((sum, item) => {
-    if (sum < 11 && item === 1) return sum + 11;
+    if (item === 1 && sum < 11 && (sum + 11 + (playerAces - 1)) < 22) return sum + 11;
     return sum + item;
   }, 0)
 
@@ -56,12 +59,15 @@ const PlayingСards = (props) => {
     }
   );
 
+  const dealerAcesArr = dealerCardsValues.filter(item => item === 1);
+  const dealerAces = dealerAcesArr.length;
+
   let dealerCardsSum = 0;
   if (!options.stand) {
     dealerCardsSum = options.dealerCards[0].value;
   } else {
     dealerCardsSum = dealerCardsValues.reduce((sum, item) => {
-      if (sum < 11 && item === 1) return sum + 11;
+      if (item === 1 && sum < 11 && (sum + 11 + (dealerAces - 1)) < 22) return sum + 11;
       return sum + item;
     }, 0)
   }
