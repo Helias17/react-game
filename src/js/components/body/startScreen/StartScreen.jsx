@@ -4,6 +4,7 @@ import PlayerRecord from './playerRecord/PlayerRecord';
 import options from '@js/options';
 import playSound from '@js/playSound';
 import audioBackground from '@js/audioBackground';
+import ResumeBtn from './resumeBtn/ResumeBtn';
 
 const StartScreen = (props) => {
 
@@ -25,6 +26,7 @@ const StartScreen = (props) => {
           options.playerBet = 0;
           options.chipsOnBet.length = 0;
           options.gameFinished = false;
+          options.gamePause = false;
           options.save();
           props.setTableState(true);
           props.setStartScreenState(false);
@@ -33,8 +35,9 @@ const StartScreen = (props) => {
           props.setNoticeText('Place your bets');
         }}>
           <img src="assets/icon-play.svg" alt="" className="btn__icon-play" />
-          Play
+          New Game
         </button>
+        <ResumeBtn setStartScreenState={props.setStartScreenState} setTableState={props.setTableState} />
         <NavLink to="/options" className="btn  btn_menu" onClick={() => {
           if (options.music) audioBackground.play();
           playSound('click')

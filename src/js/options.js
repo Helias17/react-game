@@ -15,6 +15,7 @@ const options = {
   playerCards: [],
   dealerCards: [],
   gameFinished: true,
+  gamePause: false,
   audio: {
     click: 'https://blackjack777.ws/sounds/click.wav',
     back: 'https://blackjack777.ws/sounds/back.wav',
