@@ -1,0 +1,24 @@
+.app {
+  height: 100%;
+  width: 100%;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0 5vw;
+    user-select: none;
+  }
+
+  &__body {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 10;;
+  }
+}

@@ -1,0 +1,24 @@
+.notice {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  color: #fff;
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+
+  @media (max-width: $screen-tablet) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $screen-smart-l) {
+    font-size: 30px;
+  }
+
+  &_hidden {
+    display: none;
+  }
+}
